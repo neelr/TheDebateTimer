@@ -3,3 +3,5 @@ node_modules
 .env
 out
 package-log.json
+the-debate-timer*
+.DS_Store
