@@ -40,6 +40,12 @@ export default class Sidebar extends React.Component {
                     <div className="five alt">
                         <p>2AR</p>
                     </div>
+                    <div id="aff">
+                        <p>AffPrep</p>
+                    </div>
+                    <div id="neg" className="alt">
+                        <p>NegPrep</p>
+                    </div>
                     <style jsx>{`
                     .cont {
                         color:white;
@@ -51,6 +57,7 @@ export default class Sidebar extends React.Component {
                         display:flex;
                         height:50px;
                         font-size:1.4em;
+                        cursor: pointer;
                     }
                     p {
                         margin:auto;

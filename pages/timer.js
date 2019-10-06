@@ -37,6 +37,9 @@ export default class Index extends React.Component {
         )
     }
     componentDidMount() {
+        var prep = 0;
+        var negPrep = 300;
+        var affPrep = 300;
         var alarm = new Audio('/static/alarm.mp3');
         var pause = false;
         var cleared = true;
@@ -49,6 +52,8 @@ export default class Index extends React.Component {
                 time-=1;
                 var minute = Math.floor(time/60);
                 var seconds = time % 60;
+                seconds = seconds==0 ? "00": seconds;
+                seconds = seconds<10 ? "0"+String(seconds): seconds;
                 document.getElementById("timer").innerHTML = `${minute}:${seconds==0 ? "00": seconds}`;
                 if (time === 0) {
                     on = false;
@@ -61,6 +66,7 @@ export default class Index extends React.Component {
         } 
         Array.prototype.map.call(document.getElementsByClassName("eight"),(element)=> {
             element.onclick = ()=>  {
+                prep = 0;
                 on = false;
                 clearInterval(interval);
                 cleared = false;
@@ -69,12 +75,13 @@ export default class Index extends React.Component {
                 var minute = Math.floor(time/60);
                 var seconds = time % 60;
                 seconds = seconds==0 ? "00": seconds;
-                seconds = seconds<10 ? "0"+seconds: seconds;
+                seconds = seconds<10 ? "0"+String(seconds): seconds;
                 document.getElementById("timer").innerHTML = `${minute}:${seconds==0 ? "00": seconds}`;
             }
         });
         Array.prototype.map.call(document.getElementsByClassName("five"),(element)=> {
             element.onclick = ()=>  {
+                prep = 0;
                 on = false;
                 clearInterval(interval);
                 cleared = false;
@@ -89,6 +96,7 @@ export default class Index extends React.Component {
         });
         Array.prototype.map.call(document.getElementsByClassName("three"),(element)=> {
             element.onclick = ()=>  {
+                prep = 0;
                 on = false;
                 clearInterval(interval);
                 cleared = false;
@@ -114,6 +122,37 @@ export default class Index extends React.Component {
         document.getElementById("stop").onclick = ()=> {
             alarm.pause();
             pause = true;
+            if (prep == 1) {
+                affPrep = time;
+            } else if (prep == 2) {
+                negPrep = time;
+            }
+        }
+        document.getElementById("aff").onclick = ()=>  {
+            on = false;
+            clearInterval(interval);
+            cleared = false;
+            pause = false;
+            time = affPrep;
+            prep = 1;
+            var minute = Math.floor(time/60);
+            var seconds = time % 60;
+            seconds = seconds==0 ? "00": seconds;
+            seconds = seconds<10 ? "0"+seconds: seconds;
+            document.getElementById("timer").innerHTML = `${minute}:${seconds==0 ? "00": seconds}`;
+        }
+        document.getElementById("neg").onclick = ()=>  {
+            on = false;
+            clearInterval(interval);
+            cleared = false;
+            pause = false;
+            time = negPrep;
+            prep = 2;
+            var minute = Math.floor(time/60);
+            var seconds = time % 60;
+            seconds = seconds==0 ? "00": seconds;
+            seconds = seconds<10 ? "0"+seconds: seconds;
+            document.getElementById("timer").innerHTML = `${minute}:${seconds==0 ? "00": seconds}`;
         }
     }
 }

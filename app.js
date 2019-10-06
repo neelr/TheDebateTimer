@@ -14,11 +14,11 @@ function createWindow () {
     width: 800,
     height: 600,
     minHeight:300,
-    minWidth:540,
+    minWidth:300,
     webPreferences: {
       nodeIntegration: true
     },
-    icon: path.join(__dirname, 'assets/app.png')
+    icon: path.join(__dirname, '/assets/app.png')
   })
   if (process.env.NODE_ENV !== "dev") {
     win.loadURL(url.format({
