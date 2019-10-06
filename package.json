@@ -1,0 +1,20 @@
+{
+  "name": "debatetimer",
+  "version": "1.0.0",
+  "description": "A debate timer electron app",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron .",
+    "start-next": "next",
+    "build": "next build && next export"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.1.0",
+    "electron": "^6.0.11",
+    "next": "^9.0.8",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
+  }
+}
