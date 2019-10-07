@@ -5,6 +5,6 @@ out
 package-log.json
 the-debate-timer*
 .DS_Store
-mac
-linux
-win
+mac*
+linux*
+win*

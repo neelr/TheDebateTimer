@@ -6,8 +6,6 @@ const { app, BrowserWindow, protocol } = require('electron')
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let win
-
-app.dock.setIcon(path.join(__dirname, 'assets/app.png'));
 function createWindow () {
 
   win = new BrowserWindow({
