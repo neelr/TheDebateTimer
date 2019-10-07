@@ -17,8 +17,7 @@ function createWindow () {
     minWidth:300,
     webPreferences: {
       nodeIntegration: true
-    },
-    icon: path.join(__dirname, '/assets/app.png')
+    }
   })
   if (process.env.NODE_ENV !== "dev") {
     win.loadURL(url.format({

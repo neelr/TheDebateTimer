@@ -66,6 +66,11 @@ export default class Index extends React.Component {
         } 
         Array.prototype.map.call(document.getElementsByClassName("eight"),(element)=> {
             element.onclick = ()=>  {
+                if (prep == 1) {
+                    affPrep = time;
+                } else if (prep == 2) {
+                    negPrep = time;
+                }
                 prep = 0;
                 on = false;
                 clearInterval(interval);
@@ -81,6 +86,11 @@ export default class Index extends React.Component {
         });
         Array.prototype.map.call(document.getElementsByClassName("five"),(element)=> {
             element.onclick = ()=>  {
+                if (prep == 1) {
+                    affPrep = time;
+                } else if (prep == 2) {
+                    negPrep = time;
+                }
                 prep = 0;
                 on = false;
                 clearInterval(interval);
@@ -96,6 +106,11 @@ export default class Index extends React.Component {
         });
         Array.prototype.map.call(document.getElementsByClassName("three"),(element)=> {
             element.onclick = ()=>  {
+                if (prep == 1) {
+                    affPrep = time;
+                } else if (prep == 2) {
+                    negPrep = time;
+                }
                 prep = 0;
                 on = false;
                 clearInterval(interval);
