@@ -136,6 +136,60 @@ export default class Sidebar extends React.Component {
                     `}</style>
                 </div>
             );
+        } else if (this.props.display == "ld") {
+            container = (
+                <div className="cont">
+                    <div className="six" style={{marginTop:"25px"}}>
+                        <p>1AC</p>
+                    </div>
+                    <div className="three alt">
+                        <p>CX</p>
+                    </div>  
+                    <div className="seven">
+                        <p>1NC</p>
+                    </div>
+                    <div className="three alt">
+                        <p>CX</p>
+                    </div>
+                    <div className="four">
+                        <p>1AR</p>
+                    </div>  
+                    <div className="six alt">
+                        <p>1NR</p>
+                    </div>
+                    <div className="three">
+                        <p>2AR</p>
+                    </div>                            
+                    <div id="aff" className="alt">
+                        <p>AffPrep</p>
+                    </div>
+                    <div id="neg">
+                        <p>NegPrep</p>
+                    </div>
+                    <style jsx>{`
+                    .cont {
+                        color:white;
+                        display:flex;
+                        flex-direction:column;
+                    }
+                    .cont div {
+                        margin:auto;
+                        display:flex;
+                        height:50px;
+                        font-size:1.4em;
+                        cursor: pointer;
+                    }
+                    p {
+                        margin:auto;
+                    }
+                    .alt {
+                        background-color:rgb(5, 68, 138);
+                        width:100%;
+                        text-align:center;
+                    }
+                    `}</style>
+                </div>
+            );
         }
         return (
             <div className="sidebar-container">
