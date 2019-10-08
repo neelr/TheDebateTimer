@@ -1,7 +1,7 @@
 require("dotenv").config();
 var url = require("url");
 var path = require('path')
-const { app, BrowserWindow, protocol } = require('electron')
+const {shell, app, BrowserWindow, protocol } = require('electron')
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -32,7 +32,6 @@ function createWindow () {
     win = null
   })
 }
-
 app.on('ready', () => {
     protocol.interceptFileProtocol('file', (request, callback) => {
         const url = request.url.substr(7)
@@ -41,6 +40,12 @@ app.on('ready', () => {
         if (err) console.error('Failed to register protocol')
     })
     createWindow();
+    var wc = win.webContents;
+
+    wc.on('will-navigate', function(e, url) {
+        e.preventDefault();
+        shell.openExternal(url);
+    })
 })
 
 // Quit when all windows are closed.

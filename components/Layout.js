@@ -11,12 +11,27 @@ export default class Layout extends React.Component {
                 <Sidebar display={this.props.display}>
                     {this.props.children}
                 </Sidebar>
+                <div className="footer">
+                    <a href="https://github.com/hacker719/thedebatetimer">Source Code. MIT LICENSCE</a>
+                </div>
                 <style jsx global>{`
                 html, body {
                     margin:0;
                     padding:0;
                     height:100%;
                     width:100%;
+                }
+                .footer {
+                    position:fixed;
+                    right:0;
+                    bottom:0;
+                    margin:10px;
+                    font-weight:700;
+                    font-family: 'Lato', sans-serif;
+                }
+                .footer a {
+                    color:rgb(160,160,160);
+                    
                 }
                 .button {
                     text-decoration:none;

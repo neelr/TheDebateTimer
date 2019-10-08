@@ -1,6 +1,24 @@
 export default class Sidebar extends React.Component {
     render () {
-        var container = ``;
+        var container = (
+            <div style={{display:"flex",minHeight:"100%"}}>
+                <div className="foot">
+                    <p>Made with 💖 by <a href="https://github.com/hacker719">@Hacker719</a></p>
+                </div>
+                <style jsx>{`
+                .foot {
+                    padding:10px;
+                    margin-top:auto;
+                    bottom:0;
+                    font-size:0.7em !important;
+                    color:rgb(160,160,160) !important;
+                }
+                a {
+                    color:rgb(160,160,160);
+                }
+                `}</style>
+            </div>
+        );
         if (this.props.display == "policy") {
             container = (
                 <div className="cont">
@@ -46,7 +64,20 @@ export default class Sidebar extends React.Component {
                     <div id="neg" className="alt">
                         <p>NegPrep</p>
                     </div>
+                    <div className="foot">
+                        <p>Made with 💖 by <a href="https://github.com/hacker719">@Hacker719</a></p>
+                    </div>
                     <style jsx>{`
+                    .foot {
+                        padding:10px;
+                        margin-top:auto;
+                        bottom:0;
+                        font-size:0.7em !important;
+                        color:rgb(160,160,160) !important;
+                    }
+                    a {
+                        color:rgb(160,160,160);
+                    }
                     .cont {
                         color:white;
                         display:flex;
@@ -112,7 +143,20 @@ export default class Sidebar extends React.Component {
                     <div id="neg">
                         <p>NegPrep</p>
                     </div>
+                    <div className="foot">
+                        <p>Made with 💖 by <a href="https://github.com/hacker719">@Hacker719</a></p>
+                    </div>
                     <style jsx>{`
+                    .foot {
+                        padding:10px;
+                        margin-top:auto;
+                        bottom:0;
+                        font-size:0.7em !important;
+                        color:rgb(160,160,160) !important;
+                    }
+                    a {
+                        color:rgb(160,160,160);
+                    }
                     .cont {
                         color:white;
                         display:flex;
@@ -166,11 +210,25 @@ export default class Sidebar extends React.Component {
                     <div id="neg">
                         <p>NegPrep</p>
                     </div>
+                    <div className="foot">
+                        <p>Made with 💖 by <a href="https://github.com/hacker719">@Hacker719</a></p>
+                    </div>
                     <style jsx>{`
+                    .foot {
+                        padding:10px;
+                        margin-top:auto;
+                        bottom:0;
+                        font-size:0.7em !important;
+                        color:rgb(160,160,160) !important;
+                    }
+                    a {
+                        color:rgb(160,160,160);
+                    }
                     .cont {
                         color:white;
                         display:flex;
                         flex-direction:column;
+                        min-height:100%;
                     }
                     .cont div {
                         margin:auto;
@@ -199,6 +257,7 @@ export default class Sidebar extends React.Component {
                 <div className="content">
                     {this.props.children}
                 </div>
+                <a href="/"><img src="http://assets.stickpng.com/thumbs/588a6660d06f6719692a2d16.png" style={{position:"fixed", right:"10px", top:"10px",height:"40px"}} /></a>
                 <style jsx>{`
                 @import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
                 .sidebar-container {
