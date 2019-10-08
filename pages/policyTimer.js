@@ -4,7 +4,7 @@ import Link from "next/link";
 export default class Index extends React.Component {
     render() {
         return(
-            <Layout display="true">
+            <Layout display="policy">
                 <div className="center">
                     <div className="container">
                         <h1>timer</h1>

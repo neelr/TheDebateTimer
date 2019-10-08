@@ -7,11 +7,11 @@
     "start": "electron .",
     "start-next": "next",
     "build": "next build && next export",
-    "package":"electron-packager .",
-    "build-all":"electron-packager . --overwrite --icon=/Users/neelredkar/Documents/Git/DebateTimer/assets/app.ico --platform=win32 --arch=ia32 --version-string.ProductName=\"the debate timer\" --out=win && electron-packager . --overwrite --icon=/Users/neelredkar/Documents/Git/DebateTimer/assets/app.png --asar=true --platform=linux --arch=x64 --out=linux && electron-packager . --overwrite --icon=/Users/neelredkar/Documents/Git/DebateTimer/assets/AppIcon.icns --out=mac"
+    "package": "electron-packager .",
+    "build-all": "electron-packager . --overwrite --icon=/Users/neelredkar/Documents/Git/DebateTimer/assets/app.ico --platform=win32 --arch=ia32 --version-string.ProductName=\"the debate timer\" --out=win && electron-packager . --overwrite --icon=/Users/neelredkar/Documents/Git/DebateTimer/assets/app.png --asar=true --platform=linux --arch=x64 --out=linux && electron-packager . --overwrite --icon=/Users/neelredkar/Documents/Git/DebateTimer/assets/AppIcon.icns --out=mac"
   },
   "mac": {
-  "icon": "./assets/AppIcon.icns",
+    "icon": "./assets/AppIcon.icns",
     "category": "public.app-category.utilities"
   },
   "win": {
@@ -32,8 +32,5 @@
     "next": "^9.0.8",
     "react": "^16.10.2",
     "react-dom": "^16.10.2"
-  },
-  "devDependencies": {
-    "electron":"^1.4.15"
   }
 }

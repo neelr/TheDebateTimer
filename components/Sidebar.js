@@ -1,7 +1,7 @@
 export default class Sidebar extends React.Component {
     render () {
         var container = ``;
-        if (this.props.display == "true") {
+        if (this.props.display == "policy") {
             container = (
                 <div className="cont">
                     <div className="eight" style={{marginTop:"25px"}}>
@@ -44,6 +44,72 @@ export default class Sidebar extends React.Component {
                         <p>AffPrep</p>
                     </div>
                     <div id="neg" className="alt">
+                        <p>NegPrep</p>
+                    </div>
+                    <style jsx>{`
+                    .cont {
+                        color:white;
+                        display:flex;
+                        flex-direction:column;
+                    }
+                    .cont div {
+                        margin:auto;
+                        display:flex;
+                        height:50px;
+                        font-size:1.4em;
+                        cursor: pointer;
+                    }
+                    p {
+                        margin:auto;
+                    }
+                    .alt {
+                        background-color:rgb(5, 68, 138);
+                        width:100%;
+                        text-align:center;
+                    }
+                    `}</style>
+                </div>
+            );
+        } else if (this.props.display == "pf") {
+            container = (
+                <div className="cont">
+                    <div className="four" style={{marginTop:"25px"}}>
+                        <p>1AC</p>
+                    </div>
+                    <div className="four alt">
+                        <p>1NC</p>
+                    </div>  
+                    <div className="three">
+                        <p>CX</p>
+                    </div>
+                    <div className="four alt">
+                        <p>2AC</p>
+                    </div>
+                    <div className="four">
+                        <p>2NC</p>
+                    </div>  
+                    <div className="three alt">
+                        <p>CX</p>
+                    </div>
+                    <div className="two">
+                        <p>1AR</p>
+                    </div>
+                    <div className="two alt">
+                        <p>1NR</p>
+                    </div>  
+                    <div className="three">
+                        <p>CX</p>
+                    </div>     
+                    <div className="two alt">
+                        <p>2AR</p>
+                    </div>
+                    <div className="two">
+                        <p>2NR</p>
+                    </div>                                  
+                    <div id="aff" className="alt">
+                        <p>AffPrep</p>
+                    </div>
+                    <div id="neg">
                         <p>NegPrep</p>
                     </div>
                     <style jsx>{`
