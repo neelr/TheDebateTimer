@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default class Sidebar extends React.Component {
     render () {
         var container = (
@@ -257,7 +259,7 @@ export default class Sidebar extends React.Component {
                 <div className="content">
                     {this.props.children}
                 </div>
-                <a href="/"><img src="http://assets.stickpng.com/thumbs/588a6660d06f6719692a2d16.png" style={{position:"fixed", right:"10px", top:"10px",height:"40px"}} /></a>
+                <Link href="/"><img src="http://assets.stickpng.com/thumbs/588a6660d06f6719692a2d16.png" style={{cursor:"pointer",position:"fixed", right:"10px", top:"10px",height:"40px"}} /></Link>
                 <style jsx>{`
                 @import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
                 .sidebar-container {
