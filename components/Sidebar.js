@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 export default class Sidebar extends React.Component {
-    render () {
+    render() {
         var container = (
-            <div style={{display:"flex",minHeight:"100%"}}>
+            <div style={{ display: "flex", minHeight: "100%" }}>
                 <div className="foot">
                     <p>Made with 💖 by <a href="https://github.com/hacker719">@Hacker719</a></p>
                 </div>
@@ -24,7 +24,7 @@ export default class Sidebar extends React.Component {
         if (this.props.display == "policy") {
             container = (
                 <div className="cont">
-                    <div className="eight" style={{marginTop:"25px"}}>
+                    <div className="eight" style={{ marginTop: "25px" }}>
                         <p>1AC</p>
                     </div>
                     <div className="three alt">
@@ -106,12 +106,12 @@ export default class Sidebar extends React.Component {
         } else if (this.props.display == "pf") {
             container = (
                 <div className="cont">
-                    <div className="four" style={{marginTop:"25px"}}>
+                    <div className="four" style={{ marginTop: "25px" }}>
                         <p>1AC</p>
                     </div>
                     <div className="four alt">
                         <p>1NC</p>
-                    </div>  
+                    </div>
                     <div className="three">
                         <p>CX</p>
                     </div>
@@ -120,7 +120,7 @@ export default class Sidebar extends React.Component {
                     </div>
                     <div className="four">
                         <p>2NC</p>
-                    </div>  
+                    </div>
                     <div className="three alt">
                         <p>CX</p>
                     </div>
@@ -129,16 +129,16 @@ export default class Sidebar extends React.Component {
                     </div>
                     <div className="two alt">
                         <p>1NR</p>
-                    </div>  
+                    </div>
                     <div className="three">
                         <p>CX</p>
-                    </div>     
+                    </div>
                     <div className="two alt">
                         <p>2AR</p>
                     </div>
                     <div className="two">
                         <p>2NR</p>
-                    </div>                                  
+                    </div>
                     <div id="aff" className="alt">
                         <p>AffPrep</p>
                     </div>
@@ -185,12 +185,12 @@ export default class Sidebar extends React.Component {
         } else if (this.props.display == "ld") {
             container = (
                 <div className="cont">
-                    <div className="six" style={{marginTop:"25px"}}>
+                    <div className="six" style={{ marginTop: "25px" }}>
                         <p>1AC</p>
                     </div>
                     <div className="three alt">
                         <p>CX</p>
-                    </div>  
+                    </div>
                     <div className="seven">
                         <p>1NC</p>
                     </div>
@@ -199,13 +199,13 @@ export default class Sidebar extends React.Component {
                     </div>
                     <div className="four">
                         <p>1AR</p>
-                    </div>  
+                    </div>
                     <div className="six alt">
                         <p>1NR</p>
                     </div>
                     <div className="three">
                         <p>2AR</p>
-                    </div>                            
+                    </div>
                     <div id="aff" className="alt">
                         <p>AffPrep</p>
                     </div>
@@ -250,6 +250,20 @@ export default class Sidebar extends React.Component {
                     `}</style>
                 </div>
             );
+        } else if (this.props.display == "none") {
+            container = (
+                <div>
+                    <style jsx global>{`
+                .sidebar {
+                    width:0 !important;
+                }
+                .content {
+                    padding:2vw !important;
+                    overflow:hidden;
+                }
+                `}</style>
+                </div>
+            );
         }
         return (
             <div className="sidebar-container">
@@ -259,7 +273,7 @@ export default class Sidebar extends React.Component {
                 <div className="content">
                     {this.props.children}
                 </div>
-                <Link href="/"><img src="http://assets.stickpng.com/thumbs/588a6660d06f6719692a2d16.png" style={{cursor:"pointer",position:"fixed", right:"10px", top:"10px",height:"40px"}} /></Link>
+                <Link href="/"><img src="http://assets.stickpng.com/thumbs/588a6660d06f6719692a2d16.png" style={{ cursor: "pointer", position: "fixed", right: "10px", top: "10px", height: "40px" }} /></Link>
                 <style jsx>{`
                 @import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
                 .sidebar-container {

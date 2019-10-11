@@ -20,6 +20,8 @@ export default class Layout extends React.Component {
                     padding:0;
                     height:100%;
                     width:100%;
+ 
+                    background-color:rgb(37, 46, 56);
                 }
                 .footer {
                     position:fixed;

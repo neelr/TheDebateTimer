@@ -47,7 +47,10 @@ app.on('ready', () => {
         shell.openExternal(url);
     })
 })
-
+win.on("new-window", function(event, url) {
+  event.preventDefault();
+  shell.openExternal(url);
+});
 // Quit when all windows are closed.
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
