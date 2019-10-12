@@ -9,7 +9,7 @@ export default class Flow extends React.Component {
                         <h1>the flow</h1>
                         <a className="button" id="new">New Flow</a>
                     </div>
-                    <div className="flex-row">
+                    <div id="flow" className="flex-row">
                         <textarea></textarea>
                         <textarea></textarea>
                         <textarea></textarea>
@@ -55,9 +55,6 @@ export default class Flow extends React.Component {
         )
     }
     componentDidMount() {
-        document.getElementById("new").onclick = () => {
-            window.open("/flow")
-        }
         var textareas = document.getElementsByTagName('textarea');
         var count = textareas.length;
         for (var i = 0; i < count; i++) {
