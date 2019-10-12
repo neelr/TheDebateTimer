@@ -7,7 +7,6 @@ export default class Layout extends React.Component {
             <div>
                 <Head>
                     <title>the debate timer</title>
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
                 </Head>
                 <Sidebar display={this.props.display}>
                     {this.props.children}
@@ -16,14 +15,17 @@ export default class Layout extends React.Component {
                     <a href="https://github.com/hacker719/thedebatetimer">Source Code. MIT LICENSCE</a>
                 </div>
                 <style jsx global>{`
-                .html2canvas-container { width: 3000px !important; height: 3000px !important; }
                 html, body {
                     margin:0;
                     padding:0;
                     height:100%;
                     width:100%;
- 
-                    background-color:rgb(37, 46, 56);
+                }
+                h1, h2{
+                    text-align:center;
+                }
+                #stop, #start{
+                    text-align:center;
                 }
                 .footer {
                     position:fixed;
@@ -38,6 +40,7 @@ export default class Layout extends React.Component {
                     
                 }
                 .button {
+                    text-align:center;
                     text-decoration:none;
                     padding:10px;
                     color:white;

@@ -29,10 +29,12 @@
     "electron-packager": "^14.0.6"
   },
   "devDependencies": {
-    "next": "^9.0.8",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
     "dotenv": "^8.1.0",
-    "electron": "^6.0.11"
+    "electron": "^6.0.11",
+    "html2canvas": "^1.0.0-rc.5",
+    "jspdf": "^1.5.3",
+    "next": "^9.1.1",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
   }
 }
