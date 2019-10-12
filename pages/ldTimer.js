@@ -10,8 +10,8 @@ export default class Index extends React.Component {
                         <h1>timer</h1>
                         <h2 id="timer">Press a speech!</h2>
                         <div style={{display:"flex"}}>
-                            <a style={{margin:"5px"}} id="start" className="button">Start</a>
-                            <a style={{margin:"5px"}} id="stop" className="button">Stop</a>
+                            <a style={{margin:"10px"}} id="start" className="button">Start</a>
+                            <a style={{margin:"10px"}} id="stop" className="button">Stop</a>
                         </div>
                     </div>
                     <style jsx>{`

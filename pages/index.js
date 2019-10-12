@@ -8,10 +8,14 @@ export default class Index extends React.Component {
                 <div className="center">
                     <div className="container" style = {{display:"flex",flexDirection:"column"}}>
                         <h1>the debate timer</h1>
-                        <Link href="policyTimer"><a className="button" style={{width:"auto",margin:"5px"}}>Policy</a></Link>
-                        <Link href="pfTimer"><a className="button" style={{width:"auto",margin:"5px"}}>Public Forum</a></Link>
-                        <Link href="ldTimer"><a className="button" style={{width:"auto",margin:"5px"}}>Lincoln Douglas</a></Link>
-                        <Link href="flow"><a className="button" style={{width:"auto",margin:"5px"}}>FLOW</a></Link>
+                        <Link href="policyTimer"><a className="button" style={{width:"50%",margin:"auto"}}>Policy</a></Link>
+                        <br></br>
+                        <Link href="pfTimer"><a className="button" style={{width:"50%",margin:"auto"}}>Public Forum</a></Link>
+                        <br></br>
+                        <Link href="ldTimer"><a className="button" style={{width:"50%",margin:"auto"}}>Lincoln Douglas</a></Link>
+                        <br></br>
+                        <Link href="pdfSave"><a className="button" style={{width:"50%",margin:"auto"}}>Save to PDF</a></Link>
+                        
                     </div>
                 </div>
             </Layout>
