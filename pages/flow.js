@@ -55,6 +55,9 @@ export default class Flow extends React.Component {
         )
     }
     componentDidMount() {
+        document.getElementById("new").onclick = () => {
+            window.open("/flow")
+        }
         var textareas = document.getElementsByTagName('textarea');
         var count = textareas.length;
         for (var i = 0; i < count; i++) {

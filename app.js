@@ -40,17 +40,19 @@ app.on('ready', () => {
         if (err) console.error('Failed to register protocol')
     })
     createWindow();
-    var wc = win.webContents;
-
-    wc.on('will-navigate', function(e, url) {
-        e.preventDefault();
+    win.webContents.on('did-attach-webview', (event, webContents) => {
+      webContents.on('will-navigate', function(e, url) {
+        console.log(url)
+          e.preventDefault();
+          shell.openExternal(url);
+      })
+      webContents.on("will-navigate", function(event, url) {
+        console.log("reeee");
+        event.preventDefault();
         shell.openExternal(url);
-    })
+      });
+    });
 })
-win.on("new-window", function(event, url) {
-  event.preventDefault();
-  shell.openExternal(url);
-});
 // Quit when all windows are closed.
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
