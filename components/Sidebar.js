@@ -5,7 +5,7 @@ export default class Sidebar extends React.Component {
         var container = (
             <div style={{display:"flex",minHeight:"100%"}}>
                 <div className="foot">
-                    <p>Made with 💖 by <a href="https://github.com/hacker719">@Hacker719</a></p>
+                    <p>Made with 💖 by <a href="https://github.com/neelr">@neelr</a></p>
                 </div>
                 <style jsx>{`
                 .foot {
