@@ -15,6 +15,8 @@ export default class Index extends React.Component {
                         <Link href="ldTimer"><a className="button" style={{width:"50%",margin:"auto"}}>Lincoln Douglas</a></Link>
                         <br></br>
                         <Link href="pdfSave"><a className="button" style={{width:"50%",margin:"auto"}}>Save to PDF</a></Link>
+                        <br></br>
+                        <Link href="flow"><a className="button" style={{width:"50%",margin:"auto"}}>Flow</a></Link>
                         
                     </div>
                 </div>
