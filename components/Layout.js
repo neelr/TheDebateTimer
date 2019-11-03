@@ -21,6 +21,20 @@ export default class Layout extends React.Component {
                     height:100%;
                     width:100%;
                 }
+                .textarea {
+                    background-color: #383e54;
+                    color:white;
+                    min-width:150px;
+                    padding:10px;
+                    border-radius:10px;
+                    height:50vh;
+                    margin:20px;
+                }
+                .textarea :focus {
+                    outline: none !important;
+                    border:1px solid red;
+                    box-shadow: 0 0 10px #719ECE;
+                }
                 h1, h2{
                     text-align:center;
                 }

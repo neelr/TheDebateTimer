@@ -2,6 +2,23 @@ import Layout from "../components/Layout";
 var domtoimage = require('dom-to-image');
 
 export default class Flow extends React.Component {
+    state = {
+        text:[]
+    }
+    enter (ele) {
+        var arr = this.state.text;
+        var amount = ele.value - this.state.text.length;
+        if (amount > 0) {
+            for (var i = 0; i <amount;i++) {
+                arr.push(<textarea className="textarea"></textarea>)
+            }
+        } else if (amount < 0) {
+            for (var i = 0; i < Math.abs(amount); i ++) {
+                arr.pop();
+            }
+        }
+        this.setState({text:arr});
+    }
     render() {
         return (
             <Layout display="none">
@@ -10,13 +27,11 @@ export default class Flow extends React.Component {
                         <h1>the flow</h1>
                         <a onClick={save} className="button" id="new">New Flow</a>
                     </div>
+                    <div style={{ display: "flex", flexDirection: "row", height: "auto" }}>
+                    <input min="0" onChange={() => this.enter(document.getElementById("inp"))} id="inp" className="textarea" placeholder="Column #" style={{height:"10px"}} type="number"/>
+                    </div>
                     <div id="flow" className="flex-row">
-                        <textarea></textarea>
-                        <textarea></textarea>
-                        <textarea></textarea>
-                        <textarea></textarea>
-                        <textarea></textarea>
-                        <textarea></textarea>
+                        {this.state.text}
                     </div>
                 </div>
                 <style jsx>{`
@@ -30,20 +45,6 @@ export default class Flow extends React.Component {
                     overflow:auto;
                     background-color:rgb(37, 46, 56);
                     width:80vw;
-                }
-                textarea {
-                    background-color: #383e54;
-                    color:white;
-                    min-width:150px;
-                    padding:10px;
-                    border-radius:10px;
-                    height:60vh;
-                    margin:20px;
-                }
-                textarea :focus {
-                    outline: none !important;
-                    border:1px solid red;
-                    box-shadow: 0 0 10px #719ECE;
                 }
                 .button {
                     height:20px;

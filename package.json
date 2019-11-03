@@ -27,8 +27,7 @@
   "license": "MIT",
   "dependencies": {
     "dom-to-image": "^2.6.0",
-    "electron-packager": "^14.0.6",
-    "hotkeys-js": "^3.7.2"
+    "electron-packager": "^14.0.6"
   },
   "devDependencies": {
     "dotenv": "^8.1.0",
