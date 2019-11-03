@@ -67,7 +67,7 @@ export default class Sidebar extends React.Component {
                         <p>NegPrep</p>
                     </div>
                     <div className="foot">
-                        <p>Made with 💖 by <a href="https://github.com/hacker719">@Hacker719</a></p>
+                        <p>Made with 💖 by <a href="https://github.com/neelr">@neelr</a></p>
                     </div>
                     <style jsx>{`
                     .foot {
@@ -146,7 +146,7 @@ export default class Sidebar extends React.Component {
                         <p>NegPrep</p>
                     </div>
                     <div className="foot">
-                        <p>Made with 💖 by <a href="https://github.com/hacker719">@Hacker719</a></p>
+                        <p>Made with 💖 by <a href="https://github.com/neelr">@neelr</a></p>
                     </div>
                     <style jsx>{`
                     .foot {
@@ -213,7 +213,7 @@ export default class Sidebar extends React.Component {
                         <p>NegPrep</p>
                     </div>
                     <div className="foot">
-                        <p>Made with 💖 by <a href="https://github.com/hacker719">@Hacker719</a></p>
+                        <p>Made with 💖 by <a href="https://github.com/neelr">@neelr</a></p>
                     </div>
                     <style jsx>{`
                     .foot {

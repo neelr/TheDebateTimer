@@ -3,8 +3,6 @@ var url = require("url");
 var path = require('path')
 const {shell, app, BrowserWindow, protocol } = require('electron')
 
-// Keep a global reference of the window object, if you don't, the window will
-// be closed automatically when the JavaScript object is garbage collected.
 let win
 function createWindow () {
 
@@ -19,7 +17,7 @@ function createWindow () {
   })
   if (process.env.NODE_ENV !== "dev") {
     win.loadURL(url.format({
-        pathname: 'index.html',    /* Attention here: origin is path.join(__dirname, 'index.html') */
+        pathname: 'index.html',    
         protocol: 'file',
         slashes: true
     }))

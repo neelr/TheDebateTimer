@@ -26,13 +26,13 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "electron-packager": "^14.0.6"
+    "dom-to-image": "^2.6.0",
+    "electron-packager": "^14.0.6",
+    "hotkeys-js": "^3.7.2"
   },
   "devDependencies": {
     "dotenv": "^8.1.0",
     "electron": "^6.0.11",
-    "html2canvas": "^1.0.0-rc.5",
-    "jspdf": "^1.5.3",
     "next": "^9.1.1",
     "react": "^16.10.2",
     "react-dom": "^16.10.2"

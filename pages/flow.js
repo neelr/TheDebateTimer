@@ -1,12 +1,12 @@
 import Layout from "../components/Layout";
-import html2canvas from "html2canvas";
-import jsPDF from "jspdf";
+var domtoimage = require('dom-to-image');
+
 export default class Flow extends React.Component {
     render() {
-        return(
+        return (
             <Layout display="none">
                 <div className="flex">
-                    <div style={{display:"flex",flexDirection:"row",height:"auto"}}>
+                    <div style={{ display: "flex", flexDirection: "row", height: "auto" }}>
                         <h1>the flow</h1>
                         <a onClick={save} className="button" id="new">New Flow</a>
                     </div>
@@ -27,7 +27,7 @@ export default class Flow extends React.Component {
                 .flex-row {
                     display:flex;
                     flex-direction:row;
-                    overflow:visible !important;
+                    overflow:auto;
                     background-color:rgb(37, 46, 56);
                     width:80vw;
                 }
@@ -69,17 +69,25 @@ export default class Flow extends React.Component {
                 }
             }
         }
+        document.addEventListener("keydown", function (e) {
+            if ((window.navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey) && e.keyCode == 83) {
+                e.preventDefault();
+                var flow = document.getElementById('flow');
+                flow.style.overflow = "visible";
+                flow.style.backgroundColor = "black";
+                domtoimage.toJpeg(flow, { quality: 1 })
+                    .then(function (dataUrl) {
+                        flow.style.backgroundColor = "rgb(37, 46, 56)";
+                        flow.style.overflow = "auto";
+                        var link = document.createElement('a');
+                        link.download = 'flow.jpeg';
+                        link.href = dataUrl;
+                        link.click();
+                    });
+            }
+        }, false);
     }
 }
-function save ()  {
-    alert("hi")
-    var flow = document.getElementById("flow");
-    flow.style.overflow = "visible";
-    window.resizeTo(screen.height, 1000000000000000000000000000000000000000000000000000000);
-    html2canvas(flow,{scale: 1}).then(canvas =>{
-        flow.style.overflow = "auto";
-        let pdf = new jsPDF('l','pt',[canvas.width,canvas.height]);
-        pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, canvas.width,canvas.height);
-        pdf.save("yola.pdf");
-    });
+function save() {
+    window.open("/flow")
 }
