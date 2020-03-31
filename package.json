@@ -32,7 +32,7 @@
   "devDependencies": {
     "dotenv": "^8.1.0",
     "electron": "^6.0.11",
-    "next": "^9.1.1",
+    "next": "^9.3.2",
     "react": "^16.10.2",
     "react-dom": "^16.10.2"
   }
